@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.17" />
+        <PackageReference Include="Scrutor" Version="4.2.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Billing_APICommon\**" />
+      <Compile Remove="Billing_Api.Core\**" />
+      <Compile Remove="Billing_API.Common\**" />
+      <Compile Remove="Billing_API.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Billing_APICommon\**" />
+      <EmbeddedResource Remove="Billing_Api.Core\**" />
+      <EmbeddedResource Remove="Billing_API.Common\**" />
+      <EmbeddedResource Remove="Billing_API.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Billing_APICommon\**" />
+      <None Remove="Billing_Api.Core\**" />
+      <None Remove="Billing_API.Common\**" />
+      <None Remove="Billing_API.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Billing_APICommon\**" />
+      <Content Remove="Billing_Api.Core\**" />
+      <Content Remove="Billing_API.Common\**" />
+      <Content Remove="Billing_API.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Billing_APICommon\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="Billing_APICommon\appsettings.json" />
+      <_ContentIncludedByDefault Remove="Billing_APICommon\obj\Billing_APICommon.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Billing_APICommon\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Billing_APICommon\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Billing_APICommon\Properties\launchSettings.json" />
+      <_ContentIncludedByDefault Remove="Billing_Api.Core\obj\Billing_Api.Core.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Billing_Api.Core\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Billing_Api.Core\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Billing_Api.Core\Properties\launchSettings.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Common\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Common\appsettings.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Common\obj\Billing_API.Common.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Common\obj\Billing_APICommon.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Common\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Common\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Common\Properties\launchSettings.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Tests\obj\Billing_API.Tests.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Tests\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Billing_API.Tests\obj\project.packagespec.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="Billing_Api.Core\Billing_Api.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EntityDeploy Remove="Billing_API.Tests\**" />
+    </ItemGroup>
+
+</Project>
